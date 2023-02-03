@@ -45,8 +45,9 @@ function playAgain(){
 }
 
 function game() {
+
   let score = 0;
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 4; i++) {
     let result = playRound(prompt("What will you chose ? :\n- rock\n- paper\n- scissors"));
     console.log(result);
     if (result.includes("Win")) {
@@ -58,19 +59,18 @@ function game() {
     alert(`You win the game! You got a score of ${score}/5`);
   } else {
     console.log(`You lost the game! Your score is ${score}/5`);
-    alert(`You lost the game! Your score is ${score}/5`);
+    alert(`You lost the game! Your won ${score} rounds on 5 !`);
   }
   playAgain();
 }
 
-
-
 let nickname = prompt("Welcome ! What is your name ?");
-let playerSelection = prompt(`Hi ${nickname} ! Let's play ! \n Type your choice :\n- rock\n- paper\n- scissors`);
+let greetings = alert(`Hi ${nickname} ! Let's play !`);
+let playerSelection = prompt("What will you chose ? :\n- rock\n- paper\n- scissors");
 let computerSelection = computerPlay();
 let result = playRound(playerSelection, computerPlay());
+
 console.log(result);
-
-
+let score;
 game();
 console.log(score)
