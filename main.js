@@ -17,7 +17,7 @@ function playRound(playerSelection, computerSelection) {
   }
 
   if (playerSelection === computerSelection) {
-    return "It's a tie!";
+    return `It's a tie! You both chose ${playerSelection} ! `;
   }
 
   else if (playerSelection === "rock" && computerSelection === "scissors" ||
@@ -67,7 +67,7 @@ function game() {
 let nickname = prompt("Welcome ! What is your name ?");
 let greetings = alert(`Hi ${nickname} ! Let's play !`);
 let playerSelection = prompt("What will you chose ? :\n- rock\n- paper\n- scissors");
-let computerSelection = computerPlay();
+const computerSelection = computerPlay();
 let result = playRound(playerSelection, computerPlay());
 
 console.log(result);
