@@ -57,11 +57,13 @@ function game() {
   if (score >= 3) {
     console.log(`You win the game! You got a score of ${score}/5`);
     alert(`You win the game! You got a score of ${score}/5`);
+    playAgain();
   } else {
     console.log(`You lost the game! Your score is ${score}/5`);
     alert(`You lost the game! Your won ${score} rounds on 5 !`);
+    playAgain();
   }
-  playAgain();
+
 }
 
 let nickname = prompt("Welcome ! What is your name ?");
